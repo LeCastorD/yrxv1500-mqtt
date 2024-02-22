@@ -12,7 +12,7 @@ Use it on your own risk! The tool is provided as-is, with no guarantee that the 
 - Raspberry Pi (or similar) with RS232 interface or USB<->RS232 converter
 - Python3
 - Python3 library `pyyaml`, `asyncio`, `pyserial-asyncio`, and `paho-mqtt` (will be installed by this tool on startup)
-  
+- Mosquitto for RPI
 
 ### Usage
 Easy:  
