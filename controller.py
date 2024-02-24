@@ -1268,7 +1268,7 @@ class MqttClient:
 
     async def run(self):
         # Set Connecting Client ID
-        self.client = mqtt_client.Client(self.config.client_id)
+        self.client = mqtt_client.Client(mqtt_client.CallbackAPIVersion.VERSION1, self.config.client_id)
         self.client.username_pw_set(self.config.username, self.config.password)
         self.client.reconnect_delay_set(min_delay=1, max_delay=120)
         self.client.on_connect = self.on_connect
