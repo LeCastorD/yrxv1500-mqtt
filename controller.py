@@ -385,6 +385,19 @@ class YamahaControl:
         def __str__(self):
             return str("Power Zone 1")
 
+    class PowerZone3Entity(EntityBase):
+        options = {
+            # Yamaha-ID: (MQTT-State, Set-Cmd)
+            'On': ('on', '07aed'),  # Power On
+            'Off': ('off', '07aee')  # Power Off
+        }
+
+        def mqtt_discovery_config(self):
+            return super().mqtt_discovery_config("switch", icon="mdi:power")
+
+        def __str__(self):
+            return str("Power Zone 3")
+
     class PowerZone2Entity(EntityBase):
         options = {
             # Yamaha-ID: (MQTT-State, Set-Cmd)
